@@ -83,4 +83,10 @@ y = userAge;
 
 y = `My name is ${name} and I am ${userAge} years old.`;
 
+// Destructring Array and using the rest/speard operator
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
+const [first, second, , fourth, ...rest] = numbers;
+
+x = [...rest, first, second, fourth];
+
 console.log(x, y);
