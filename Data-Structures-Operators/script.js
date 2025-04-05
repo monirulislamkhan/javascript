@@ -34,3 +34,35 @@ console.log(main, second);
 // Receive values from a funtion
 const [starter, main1] = restaurant.order(1, 0);
 console.log(starter, main1);
+
+const arr1 = [1, 2, 3, 4, 5, 6];
+
+const newArr = [arr1, 7];
+
+console.log(newArr);
+
+let person = { name: 'John', age: 25 };
+console.log(person);
+
+person.age = 255;
+
+console.log(person);
+
+let str = 'Hello';
+console.log(str);
+
+str = 'hi';
+
+console.log(str);
+
+function nameSuffler(str) {
+  return str.split(' ').reverse().join(' ');
+}
+
+// console.log(nameSuffler('monirul Khan'));
+
+const isEmpty = function (obj) {
+  return Object.keys(obj).length > 0;
+};
+
+console.log(isEmpty());
