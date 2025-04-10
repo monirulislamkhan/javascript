@@ -17,7 +17,7 @@ const today = new Date();
 const dayName = Intl.DateTimeFormat('en-US', { weekday: 'long' }).format(today);
 console.log('Today is : ' + dayName);
 
-const hours = today.getHours() -10;
+const hours = today.getHours();
 // console.log(typeof hours);
 const minutes = today.getMinutes();
 const seconds = today.getSeconds();
@@ -30,3 +30,9 @@ function pad(value) {
 
 const timeString = `${pad(hours)}:${pad(minutes)}:${pad(seconds)} ${amPm}`;
 console.log(`Formatted time: ${timeString}`);
+
+let x = 511;
+const convertStr = x.toString();
+let padStr = x.toString().padStart(x.toString().length + 3, '*');
+console.log(padStr);
+// console.log();
