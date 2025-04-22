@@ -1,9 +1,21 @@
-/* const person = {
-  name: 'Hcorealestates',
-  age: 21,
-};
+// setTimeout - takes in a callback and a time to wait until that callback is executed
 
-const anotherPerson = person;
-anotherPerson.age = 25;
-console.log(person);
-console.log(anotherPerson); */
+setTimeout(function () {
+  console.log('Hello from callback');
+}, 2000);
+
+// Named function
+setTimeout(changeText, 3000);
+
+function changeText() {
+  document.querySelector('h1').textContent = 'Hello from callback';
+}
+
+// clearTimeout() will clear a timer
+const timerId = setTimeout(changeText, 3000);
+
+document.querySelector('#cancel').addEventListener('click', () => {
+  console.log(timerId);
+  clearTimeout(timerId);
+  console.log('Timer Cancelled');
+});

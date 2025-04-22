@@ -1,22 +1,20 @@
-const form = document.getElementById('item-form');
-const inputItem = document.getElementById('item-input');
-const itemList = document.getElementById('item-list');
-form.addEventListener('submit', function (e) {
-  e.preventDefault();
-  // alert('hi');
-  // console.log(e.target);
-  const newItem = inputItem.value;
-  if (newItem === '') {
-    alert('Please set any items');
-    return;
-  }
-  // console.log(newItem);
+const button = document.querySelector('form button');
+const div = document.querySelector('form div:nth-child(2)');
+const form = document.querySelector('form');
 
-  const li = document.createElement('li');
+button.addEventListener('click', (e) => {
+  alert('Button was clicked');
+  e.stopPropagation();
+});
 
-  // li
+div.addEventListener('click', () => {
+  alert('Div was clicked');
+});
 
-  const createButton = document.createElement('button');
-  createButton.className = 'remove-item btn-link text-red';
-  console.log(li);
+form.addEventListener('click', () => {
+  alert('Form was clicked');
+});
+
+document.body.addEventListener('click', () => {
+  alert('Body was clicked');
 });
