@@ -5,23 +5,69 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Form Version 1</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 30px;
+      }
+
+      form {
+        max-width: 400px;
+      }
+
+      label {
+        display: block;
+        margin-top: 15px;
+      }
+
+      input[type='text'],
+      input[type='email'] {
+        width: 100%;
+        padding: 8px;
+        margin-top: 5px;
+        box-sizing: border-box;
+      }
+
+      .error {
+        border: 1px solid red;
+      }
+
+      .error-message {
+        color: red;
+        font-size: 0.9em;
+        margin-top: 3px;
+      }
+
+      .success-message {
+        color: green;
+        margin-top: 15px;
+        font-weight: bold;
+      }
+
+      button {
+        margin-top: 20px;
+        padding: 10px 20px;
+      }
+    </style>
   </head>
   <body>
-    <div class="container px-6 py-8">
-      <form id="myForm">
-        <label>
-          Name:
-          <input type="text" id="name" name="name" />
-        </label>
-        <br /><br />
-        <label>
-          Email:
-          <input type="email" id="email" name="email" />
-        </label>
-        <br /><br />
-        <button type="submit" class="cursor-pointer">Submit</button>
-      </form>
-    </div>
+    <form id="contactForm" novalidate>
+      <label>
+        Name:
+        <input type="text" id="name" name="name" />
+        <div class="error-message" id="nameError"></div>
+      </label>
+
+      <label>
+        Email:
+        <input type="email" id="email" name="email" />
+        <div class="error-message" id="emailError"></div>
+      </label>
+
+      <button type="submit">Submit</button>
+
+      <div class="success-message" id="successMessage"></div>
+    </form>
     <script src="script.js"></script>
   </body>
 </html>
